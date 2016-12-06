@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ckplayer简单调用演示</title>
+
+</head>
+
+<body>
+<div id="a1"></div>
+<!-- <iframe border="0" frameborder="0" height="460" id="player_swf" marginheight="0" marginwidth="0" scrolling="no" src="http://zxfuli.117o.com/jx/dapi.php?id=xJSpcJaczK2hdGNpkZllY2l2e3o000omnWGAfZmvgZqjcQO0O0OO0O0O&amp;key=265fd75e14809974" width="100%"></iframe> -->
+
+<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+		// f:'http://img.ksbbs.com/asset/Mon_1605/0ec8cc80112a2d6.mp4',
+		f:'http://106.74.25.12/youku/6763A8C4803581053828221C0/0300080B005845D85A74AB2D9B7D2FD60C63BA-94DA-53E8-09B7-5753B98E4BC4.mp4',
+		c:0,
+		b:1,
+		i:'http://www.ckplayer.com/static/images/cqdw.jpg'
+		};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);
+	/*
+	CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+	下面三行是调用html5播放器用到的
+	*/
+	/*var video=['http://img.ksbbs.com/asset/Mon_1605/0ec8cc80112a2d6.mp4->video/mp4'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];
+	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
+	
+	
+	function closelights(){//关灯
+		alert(' 本演示不支持开关灯');
+	}
+	function openlights(){//开灯
+		alert(' 本演示不支持开关灯');
+	}*/
+	
+  </script>
+<!-- <script type="text/javascript" src="http://zxfuli.117o.com/jx/player/player.js"></script> -->
+<!-- <script type="text/javascript" src="http://zxfuli.117o.com/jx/player/player.js"></script> -->
+  <script type="text/javascript">
+// function loadedHandler(){
+//         CKobject.getObjectById('ckplayer_a1').addListener('error','errorHandler');}
+// function errorHandler(){
+//                 location.reload(true);
+//         }
+// function player(){
+// 		var flashvars={f:'http://zxfuli.117o.com/jx/2s.php?id=qIKqoJWFfZqxg5yicAO0O0OO0O0O',s:2,c:0,loaded:'loadedHandler',p:1,b:1};		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+// 		CKobject.embedSWF('http://zxfuli.117o.com/jx/player/player.swf','a1','ckplayer_a1','100%','460px',flashvars,params);
+		// var video=['http://zxfuli.117o.com/jx/2x.php?id=qIKqoJWFfZqxg5yicImrqdWabqTUbAO0O0OO0O0O&key=63a6fe8214809974'];		var support=['iPad','iPhone','ios','android+false','msie10+false'];
+		// CKobject.embedHTML5('a1','ckplayer_a1','100%','460px',video,flashvars,support);
+// }
+
+// 完整视频地址
+// 'http://106.74.25.12/youku/6763A8C4803581053828221C0/0300080B005845D85A74AB2D9B7D2FD60C63BA-94DA-53E8-09B7-5753B98E4BC4.mp4'
+
+function player(){
+	var flashvars={f:'demo.xml',s:2,c:0,loaded:'loadedHandler',p:1,b:1};		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('http://zxfuli.117o.com/jx/player/player.swf','a1','ckplayer_a1','100%','460px',flashvars,params);
+}
+player();
+</script>
+</body>
+</html>
