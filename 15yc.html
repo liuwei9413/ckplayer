@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线福利网播放器</title>
+</head>
+<body>
+<div id="a1"></div>
+<script type="text/javascript" src="ckplayer/player.js" charset="utf-8"></script>
+<script type="text/javascript">
+function loadedHandler(){
+        CKobject.getObjectById('ckplayer_a1').addListener('error','errorHandler');}
+function errorHandler(){
+                location.reload(true);
+        }
+function player(){
+        var flashvars={f:'/jx/2s.php?id=qIKqoJeGs5ZogpyicAO0O0OO0O0O',s:2,c:0,loaded:'loadedHandler',p:1,b:1};      var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        CKobject.embedSWF('ckplayer/player.swf','a1','ckplayer_a1','100%','460px',flashvars,params);
+        var video=['/jx/2x.php?id=qIKqoJeGs5ZogpyicImrqdWabqTUbAO0O0OO0O0O&key=32bb471014810255'];      var support=['iPad','iPhone','ios','android+false','msie10+false'];
+        CKobject.embedHTML5('a1','ckplayer_a1','100%','460px',video,flashvars,support);
+}
+player();
+</script>
+</body>
+</html>
